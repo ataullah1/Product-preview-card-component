@@ -1,0 +1,118 @@
+:root {
+  /*======= Primary Color ========= */
+  --darkCyan: hsl(158, 36%, 37%);
+  --creamColor: hsl(30, 38%, 92%);
+  /* ======Neutral Color ========= */
+  --veryDarkBlue: hsl(212, 21%, 14%);
+  --darkGrayishBlue: hsl(228, 12%, 48%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --fontFamilyFraunces: 'Fraunces', serif;
+  --fontFamilyMontserrat: 'Montserrat', sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  background-color: var(--creamColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main {
+  width: 576px;
+  background: var(--whiteColor);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.main .image img {
+  max-width: 100%;
+  height: 100%;
+  border-radius: 10px 0px 0px 10px;
+}
+.image .phn {
+  display: none;
+}
+.main .description {
+  padding: 30px;
+}
+.description p {
+  font-size: 14px;
+  font-family: var(--fontFamilyMontserrat);
+  font-weight: 500;
+  color: var(--darkGrayishBlue);
+  padding-bottom: 20px;
+}
+.f_p {
+  letter-spacing: 0.4rem;
+}
+.description h3 {
+  font-size: 35px;
+  font-family: var(--fontFamilyFraunces);
+  font-weight: 700;
+  color: var(--veryDarkBlue);
+  padding-bottom: 25px;
+}
+.prise {
+  display: flex;
+  /* background-color: aqua; */
+  align-items: center;
+  gap: 20px;
+}
+.prise h2 {
+  font-family: var(--fontFamilyFraunces);
+  font-weight: 700;
+  color: var(--darkCyan);
+  padding-bottom: 25px;
+  font-size: 35px;
+}
+button {
+  background-color: var(--darkCyan);
+  border: 1px solid var(--darkCyan);
+  color: var(--whiteColor);
+  width: 100%;
+  padding: 15px 0px;
+  border-radius: 10px;
+  font-family: var(--fontFamilyMontserrat);
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #1a4031;
+  transition: 0.3s;
+}
+.attribution {
+  margin-top: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: underline rgb(255, 7, 247);
+}
+@media (max-width: 576px) {
+  .main .image .pc {
+    display: none;
+  }
+  .main .image .phn {
+    display: block;
+  }
+  html body {
+    padding: 2px 30px;
+  }
+  .main {
+    width: 100%;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+  }
+  .main .image img {
+    max-width: 100%;
+    border-radius: 10px 10px 0px 0px;
+  }
+}
